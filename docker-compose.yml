@@ -23,7 +23,6 @@ services:
       - broker
     deploy:
       replicas: 1
-
   cliente:
     build:
       context: .
@@ -35,3 +34,5 @@ services:
       - servidor
     deploy:
       replicas: 1
+    stdin_open: true
+    tty: true
